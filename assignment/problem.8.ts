@@ -9,5 +9,5 @@
 
     console.log(validateKeys(person, ["name", "age"]));
     console.log(validateKeys(person, ["name", "email"]));
-    console.log(validateKeys(person, ["name", "address"]));
+
 }
