@@ -13,4 +13,4 @@ type ArrayNumbers =  number[];
 
 const numbers: ArrayNumbers = [5,6,8,7,9,4];
 
-console.log(`The sum result: ${sumArray(numbers)}`);
+// console.log(`The sum result: ${sumArray(numbers)}`);
