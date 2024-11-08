@@ -36,3 +36,30 @@ functionn processValue(value: unknown){
 ### 3. Easier to REad and Understand
 
 Type Guards make your code cleaner for other developers. It's easier to see what you are  checking for, and it reduces bugs.
+
+## Understanding the Types of Type Guards in TypeScript and Their Use Cases
+
+Type guards in TypeScript help you  narrow down the type of a variable during **runtime** to ensure that your code is type-safe. 
+
+### 1. typeof Type Guard
+The typeof  type guard is one of the simplest and most commonly used type guards. 
+It checks if a variable is of a specific **primitive type**, such as string, number, boolean, or symbol. 
+
+**Use Case**
+- Useful when you need to differentiate between primitive types (e.g., string vs. number).
+*example:-*
+
+function processValue(value: string | number){
+    if(typeof value === "string"){
+        console.log(`string value: ${value.toUpperCase()}`);
+    } else {
+        console.log(`number value: ${value.tofixed(2)}`);
+    };
+};
+
+### 2 instanceOf Type Guard 
+The instanceof type guard is used to check if an object is an instance of a specific class.
+This is particularly useful when working with custom classes or built-in objects like Date and array.
+
+**Use Case**
+- Best for checking if an object belongs to a particular class.
