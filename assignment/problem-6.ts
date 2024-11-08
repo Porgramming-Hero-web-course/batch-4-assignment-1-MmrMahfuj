@@ -15,4 +15,4 @@ const updateProfile: UpdateProfile = (profile, updates) => {
 };
 
 const myProfile = {name: "alice", age: 25, email:"alice@gmail.com"};
-console.log(updateProfile(myProfile, {age: 26}));
+// console.log(updateProfile(myProfile, {age: 26}));

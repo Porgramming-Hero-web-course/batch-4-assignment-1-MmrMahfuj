@@ -33,7 +33,7 @@ const rectangleArea= calculateShapeArea({
 })
 
 
-console.log(circleArea)
-console.log(rectangleArea);
-console.log(calculateShapeArea({shape:"circle", radius:10}))
+// console.log(circleArea)
+// console.log(rectangleArea);
+// console.log(calculateShapeArea({shape:"circle", radius:10}))
 

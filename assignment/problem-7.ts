@@ -9,10 +9,11 @@ class Car {
         this.year = year;
     };
 
-    getCarAge(): void {
+    getCarAge(): number {
         const currentYear: number = new Date().getFullYear();
         // console.log(currentYear);
-         return console.log(`${currentYear - this.year} (assuming current year is ${currentYear})`)
+        const sum: number = currentYear - this.year;
+         return sum 
     };
 
     // getCarAge(): void{
@@ -21,4 +22,4 @@ class Car {
 };
 
 const car = new Car("Honda", "Civic", 2018);
-car.getCarAge()
+// console.log(car.getCarAge())

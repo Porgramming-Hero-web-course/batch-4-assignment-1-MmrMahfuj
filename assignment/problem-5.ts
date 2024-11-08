@@ -10,4 +10,4 @@ const person =  {
 }
 
 const result1 = getProperty(person,"name")
-console.log(result1);
+// console.log(result1);
