@@ -62,4 +62,47 @@ The instanceof type guard is used to check if an object is an instance of a spec
 This is particularly useful when working with custom classes or built-in objects like Date and array.
 
 **Use Case**
-- Best for checking if an object belongs to a particular class.
+- Best for checking if an object belongs to a particular class. *example:-*
+
+class Car {
+    constructor(public make: string, public model: string){}
+}
+
+function isCar(obj: any,): obj is Car {
+    return obj instanceof Car;
+};
+
+const myCar = new Car("Toyota", "camry");
+const randomObj = {make: "Ford", model: "Focus"};
+
+console.log(isCar(myCar));
+console.log(isCar(randomObj));
+
+
+### 3. in Type Guard
+The in keyword check if a property exists on an object. It is especially useful for union types where the objects have different properties.
+
+**Use Case**
+- Useful when objects in a union type have different properties.
+*example:-*
+
+type Dog = {breed: string, bark: ()=> void};
+type Cat = {breed: string, meow: ()=> void};
+
+function makeSound(animal: Dog | Cat) {
+    if("bark" in animal){
+        animal.bark();
+    } else{
+        animal.meow();
+    };
+};
+
+const dog: Dog = {bread: "bagha", bark: () => console.log("woof!")};
+const dog: Dog = {bread: "tom", meow: () => console.log("meow!")};
+
+makeSound(dog);
+makeSound(cat);
+
+
+### Overview 
+type guards help make TypeScript code safer and prevent errors. They are especially useful when your code works with different data types or data from APIs. By using type guards, your can confidently access properties and methods without worrying about crashes.
